@@ -22,7 +22,7 @@ app.get("/api/media", async (req, res) => {
   }
 
   try {
-    const media = await extractMedia({ url, ...rest });
+    const media = await extractMedia({ url: decodeURIComponent(url), ...rest });
     res.status(200).json(media);
   } catch (error) {
     console.error(`Error extracting media from ${url}:`, error);
