@@ -1,0 +1,4 @@
+onlyBuiltDependencies:
+  - es5-ext
+  - oembed-spec
+  - re2
